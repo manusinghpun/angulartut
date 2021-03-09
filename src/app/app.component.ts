@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserServiceService } from './user-service.service'
 
 @Component({
   selector: 'app-root',
@@ -33,6 +34,18 @@ export class AppComponent {
   myEvent(evt: any)
   {
     console.warn(evt)
+  }
+
+  data = ['anil','peter','sam']
+
+  data1 = [];
+
+  constructor(private user:UserServiceService)
+  {
+    this.user.getData().subscribe( data1 => {
+       this.data1 = <any> data1
+
+    })
   }
 
  

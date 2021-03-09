@@ -6,16 +6,29 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 
 import { UsersModule } from './users/users.module'
+import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button'
+import { HttpClient, HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent
+    UserListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UsersModule
+    UsersModule,
+    FormsModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

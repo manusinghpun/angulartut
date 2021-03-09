@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <h1>Hello world</h1>
 <h2> {{title}}</h2>
 <h2> {{name}} </h2>
@@ -14,3 +16,29 @@
 
 <input type="text" #box (keydown)="myEvent(box.value)" />
 <br/><br/>
+
+<h1>For loop in angular</h1>
+<h4 *ngFor="let item of data">
+    {{ item }}
+</h4>
+
+<p>
+    <ngb-alert [dismissible]="false">
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </ngb-alert>
+  </p>
+
+  <button mat-button>Angular</button>
+
+  <table border="1">
+    <tr>
+      <td>Id</td>
+      <td>Title</td>
+      <td>User Id</td>
+    </tr>
+    <tr *ngFor = "let item of data1">
+      <td>{{ item['id'] }}</td>
+      <td> {{ item['title'] }}</td>
+      <td>{{ item['userId'] }}</td>
+    </tr>
+  </table>
